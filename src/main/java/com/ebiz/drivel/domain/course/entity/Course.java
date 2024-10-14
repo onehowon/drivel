@@ -32,6 +32,8 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Integer id2;
+
     @Column(name = "title", nullable = false, length = 50)
     private String title;
 

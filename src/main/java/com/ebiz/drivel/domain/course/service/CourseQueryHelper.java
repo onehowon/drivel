@@ -71,11 +71,11 @@ public class CourseQueryHelper {
 
     public static OrderSpecifier<?> getOrderSpecifier(OrderBy orderBy, QCourse course, Member member) {
         if (orderBy == null) {
-            return course.id.desc();
+            return course.id2.asc();
         }
         switch (orderBy) {
             case LATEST:
-                return course.id.desc();
+                return course.id2.asc();
             case RECOMMEND:
                 JPQLQuery<Integer> totalMatchCountQuery = JPAExpressions
                         .select(
